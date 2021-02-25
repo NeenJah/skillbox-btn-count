@@ -2,7 +2,7 @@ const path = require('path'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  plugins: [new MiniCssExtractPlugin({ filename: `style.css` })],
+  plugins: [new MiniCssExtractPlugin({ filename: `btn-count.css` })],
   mode: 'development',
   entry: './src/js/index.js',
   output: {

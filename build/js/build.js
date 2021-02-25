@@ -16,7 +16,7 @@
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"btnCount\": () => /* binding */ btnCount\n/* harmony export */ });\nconst btnCount = document.createElement(\"button\");\nbtnCount.classList.add(\"btn-count\");\nbtnCount.textContent = 0;\n\nfunction onIncValueBtnClick() {\n  let value = +this.textContent;\n  this.textContent = ++value;\n}\n\n;\nbtnCount.addEventListener(\"click\", onIncValueBtnClick);\n\n\n//# sourceURL=webpack://btn-count/./src/js/button.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ButtonCounter\": () => (/* binding */ ButtonCounter)\n/* harmony export */ });\nconst START_VALUE = 0,\n      BTN_CLASS_NAME = \"btn-count\";\n\nfunction onIncValueBtnClick() {\n  let value = +this.textContent;\n  this.textContent = ++value;\n}\n\n;\n\nclass ButtonCounter {\n  constructor() {\n    this.elem = document.createElement(\"button\");\n    this.elem.classList.add(BTN_CLASS_NAME);\n    this.elem.textContent = START_VALUE;\n    this.elem.addEventListener(\"click\", onIncValueBtnClick);\n  }\n\n  render(selector) {\n    document.querySelector(selector).append(this.elem);\n  }\n\n}\n\n\n\n//# sourceURL=webpack://skillbox-btn-count/./src/js/button.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_button_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/button.css */ \"./src/css/button.css\");\n/* harmony import */ var _js_button_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../js/button.js */ \"./src/js/button.js\");\n\n\n\n\ndocument.body.append(_js_button_js__WEBPACK_IMPORTED_MODULE_1__.btnCount);\n\n//# sourceURL=webpack://btn-count/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_button_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/button.css */ \"./src/css/button.css\");\n/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button */ \"./src/js/button.js\");\n\n\n\n\nwindow.ButtonCounter = _button__WEBPACK_IMPORTED_MODULE_1__.ButtonCounter;\n\n//# sourceURL=webpack://skillbox-btn-count/./src/js/index.js?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://btn-count/./src/css/button.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://skillbox-btn-count/./src/css/button.css?");
 
 /***/ })
 
@@ -80,7 +80,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -95,9 +95,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	})();
 /******/ 	
 /************************************************************************/
+/******/ 	
 /******/ 	// startup
-/******/ 	// Load entry module
-/******/ 	__webpack_require__("./src/js/index.js");
-/******/ 	// This entry module used 'exports' so it can't be inlined
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/index.js");
+/******/ 	
 /******/ })()
 ;

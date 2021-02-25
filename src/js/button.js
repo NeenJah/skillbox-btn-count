@@ -1,22 +1,13 @@
 const START_VALUE = 0,
       BTN_CLASS_NAME = `btn-count`;
 
-/*const btnCount = document.createElement(`button`);
-
-btnCount.classList.add(`btn-count`);
-btnCount.textContent = 0;*/
-
 function onIncValueBtnClick() {
   let value = +this.textContent;
 
   this.textContent = ++value;
 };
 
-/*btnCount.addEventListener(`click`, onIncValueBtnClick);
-
-export {btnCount};*/
-
-/*export default*/ class ButtonCounter {
+class ButtonCounter {
 
   constructor() {
     this.elem = document.createElement(`button`);
@@ -31,5 +22,4 @@ export {btnCount};*/
 
 }
 
-const btn = new ButtonCounter();
-btn.render(`header`);
+export {ButtonCounter};

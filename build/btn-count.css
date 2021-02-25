@@ -1,0 +1,21 @@
+.btn-count {
+  padding: 20px 40px;
+  border: 5px solid #95c8e8;
+  color: #3d3d3d;
+  font-size: 28px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow .1s;
+}
+
+.btn-count:hover {
+  color: #000;
+}
+
+.btn-count:active {
+  box-shadow: inset 2px 2px 0 2px #3d3d3d;
+}
+
+.btn-count:focus {
+  outline: none;
+}

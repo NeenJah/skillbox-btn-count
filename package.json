@@ -28,9 +28,7 @@
   },
   "browserslist": "last 2 years",
   "bundleDependencies": false,
-  "dependencies": {
-    "webpack-cli": "^4.4.0"
-  },
+  "dependencies": {},
   "deprecated": false,
   "description": "just a button with a counter",
   "devDependencies": {
@@ -40,7 +38,8 @@
     "css-loader": "^5.0.1",
     "mini-css-extract-plugin": "^1.3.4",
     "style-loader": "^2.0.0",
-    "webpack": "^5.17.0"
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
   },
   "keywords": [
     "button",
@@ -55,5 +54,5 @@
     "build": "webpack",
     "test": "echo 'test'"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }

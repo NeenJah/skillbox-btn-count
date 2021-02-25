@@ -1,4 +1,6 @@
 `use strict`;
 
 import '../css/button.css';
-import '../js/button.js';
+import {ButtonCounter} from './button';
+
+window.ButtonCounter = ButtonCounter;
